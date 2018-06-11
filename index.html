@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TextToLink</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <style>
+        body{
+            margin: 0;
+            font-family: Roboto, sans-serif;
+        }
+        .body-wrap{
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-color: #d6d6d6;
+        }
+        #text, .links{
+            display: block;
+            width: 60vw;
+            height: 70vh;
+            max-width: 60vw;
+            max-height: 70vh;
+            border-radius: 5px;
+            border: 1px solid #b2a9a9;
+            padding: 20px 20px 20px 40px;
+            outline: none;
+            font-size: 18px;
+        }
+        #text{
+            line-height: 1.8;
+        }
+        #text:focus{
+            border-color: #4ce0e0;
+        }
+        ol{
+            margin: 0;
+        }
+        .links{
+            display: none;
+            overflow: auto;
+            background-color: #fff;
+            padding-left: 50px;
+        }
+        a{
+            display: block;
+            padding: 5px 0;
+            color: #18a352;
+            font-size: 18px;
+        }
+        a:visited{
+            color: red;
+        }
+        .btn{
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-family: Roboto, sans-serif;
+            background-color: #6b8cef;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            letter-spacing: 2px;
+            color: #ffffff;
+            transition: background-color .25s ease;
+            outline: none;
+            display: inline-block;
+            margin-right: 13px;
+        }
+        .btn:hover{
+            background-color: #4f67ad;
+        }
+        h2{
+            font-size: 22px;
+            font-style: italic;
+            text-align: center;
+            font-family: 'Raleway', sans-serif;
+            letter-spacing: 2px;
+            font-weight: bold;
+            margin-top: 0;
+            color: #7f7979;
+        }
+        .disabled:hover {
+            cursor: auto;
+            background-color: #6b8cef;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="body-wrap">
+        <div class="content">
+            <h2>Text to link replacer</h2>
+            <ol class="links"></ol>
+            <textarea name="" id="text"></textarea>
+            <button id="replace" class="btn">Replace</button>
+            <button id="edit" class="btn">Edit links</button>
+        </div>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    var textArea = $('#text');
+    var linksBox = $('.links');
+    var textLinks = '';
+    $('#edit').prop('disabled', true).addClass('disabled');
+    $('#replace').click(function () {
+        linksBox.empty();
+        var strVal = textArea.val();
+        textLinks = textArea.val();
+        var array = strVal.split('\n');
+        for(var i = 0; i < array.length; i++){
+            var str = array[i];
+            if(str.length >= 60){
+                str = str.substr(0, 60) + '...';
+            }
+            var html = '<li><a href="' + array[i] + '" target="_blank">' + str + '</a></li>';
+            linksBox.append(html);
+        }
+        textArea.hide();
+        linksBox.show();
+    });
+    $('#edit').click(function () {
+        textArea.val(textLinks).show();
+        linksBox.hide();
+    });
+    $('#replace, #edit').click(function () {
+        if(textArea.is(':visible')){
+            $('#edit').prop('disabled', true).addClass('disabled');
+            $('#replace').prop('disabled', false).removeClass('disabled');
+        }
+        else{
+            $('#replace').prop('disabled', true).addClass('disabled');
+            $('#edit').prop('disabled', false).removeClass('disabled');
+        }
+    });
+</script>
+</html>
