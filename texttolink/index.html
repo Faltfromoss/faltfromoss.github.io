@@ -48,9 +48,14 @@
             padding: 5px 0;
             color: #18a352;
             font-size: 18px;
+            text-decoration: none;
         }
         a:visited{
             color: red;
+        }
+        a:hover{
+            color: #2a10d1;
+            text-decoration: underline;
         }
         .btn{
             margin-top: 20px;
@@ -90,15 +95,15 @@
     </style>
 </head>
 <body>
-    <div class="body-wrap">
-        <div class="content">
-            <h2>Text to link replacer</h2>
-            <ol class="links"></ol>
-            <textarea name="" id="text"></textarea>
-            <button id="replace" class="btn">Replace</button>
-            <button id="edit" class="btn">Edit links</button>
-        </div>
+<div class="body-wrap">
+    <div class="content">
+        <h2>Text to link replacer</h2>
+        <ol class="links"></ol>
+        <textarea name="" id="text"></textarea>
+        <button id="replace" class="btn">Replace</button>
+        <button id="edit" class="btn">Edit links</button>
     </div>
+</div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
