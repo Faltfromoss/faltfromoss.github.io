@@ -14,8 +14,12 @@
             height: 100vh;
             justify-content: center;
             align-items: center;
-            background-color: #d6d6d6;
-        }
+            /*background-color: #d6d6d6;*/
+            background: #8e857f; /* Old browsers */
+            background: -moz-linear-gradient(top, #8e857f 0%, #fcfcfc 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, #8e857f 0%,#fcfcfc 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, #8e857f 0%,#fcfcfc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8e857f', endColorstr='#fcfcfc',GradientType=0 ); /* IE6-9 */        }
         #text, .links{
             display: block;
             width: 60vw;
@@ -30,6 +34,7 @@
         }
         #text{
             line-height: 1.8;
+            font-style: italic;
         }
         #text:focus{
             border-color: #4ce0e0;
@@ -41,7 +46,7 @@
             display: none;
             overflow: auto;
             background-color: #fff;
-            padding-left: 50px;
+            padding: 20px 10px 20px 60px;
         }
         a{
             display: block;
@@ -49,13 +54,15 @@
             color: #18a352;
             font-size: 18px;
             text-decoration: none;
+            width: 100%;
+            transition: background-color .2s ease;
         }
         a:visited{
-            color: red;
+            color: #fc5858;
         }
         a:hover{
-            color: #2a10d1;
-            text-decoration: underline;
+            /*color: #2a10d1;*/
+            background-color: rgba(162, 203, 229, .5);
         }
         .btn{
             margin-top: 20px;
@@ -84,7 +91,7 @@
             letter-spacing: 2px;
             font-weight: bold;
             margin-top: 0;
-            color: #7f7979;
+            color: #51504f;
         }
         .disabled:hover {
             cursor: auto;
