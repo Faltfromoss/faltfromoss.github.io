@@ -116,14 +116,41 @@
 <script>
     var textArea = $('#text');
     var linksBox = $('.links');
+    var editBtn = $('#edit');
+    var replaceBtn = $('#replace');
     var textLinks = '';
-    $('#edit').prop('disabled', true).addClass('disabled');
-    $('#replace').click(function () {
-        linksBox.empty();
+
+    editBtn.prop('disabled', true).addClass('disabled');
+
+    textArea.on('paste', function (e) {
+        var strVal = (e.originalEvent || e).clipboardData.getData('text/plain');
+        replaceLinks(strVal);
+        replaceBtn.prop('disabled', true).addClass('disabled');
+        editBtn.prop('disabled', false).removeClass('disabled');
+    });
+
+    editBtn.click(function () {
+        textArea.val(textLinks).show();
+        linksBox.hide();
+        editBtn.prop('disabled', true).addClass('disabled');
+        replaceBtn.prop('disabled', false).removeClass('disabled');
+    });
+
+    replaceBtn.click(function () {
         var strVal = textArea.val();
-        textLinks = textArea.val();
+        replaceLinks(strVal);
+        replaceBtn.prop('disabled', true).addClass('disabled');
+        editBtn.prop('disabled', false).removeClass('disabled');
+    });
+
+    function replaceLinks(strVal){
+        textLinks = strVal;
         var array = strVal.split('\n');
+        linksBox.empty();
         for(var i = 0; i < array.length; i++){
+            if(array[i] === ''){
+                continue;
+            }
             var str = array[i];
             if(str.length >= 60){
                 str = str.substr(0, 60) + '...';
@@ -133,20 +160,6 @@
         }
         textArea.hide();
         linksBox.show();
-    });
-    $('#edit').click(function () {
-        textArea.val(textLinks).show();
-        linksBox.hide();
-    });
-    $('#replace, #edit').click(function () {
-        if(textArea.is(':visible')){
-            $('#edit').prop('disabled', true).addClass('disabled');
-            $('#replace').prop('disabled', false).removeClass('disabled');
-        }
-        else{
-            $('#replace').prop('disabled', true).addClass('disabled');
-            $('#edit').prop('disabled', false).removeClass('disabled');
-        }
-    });
+    }
 </script>
 </html>
