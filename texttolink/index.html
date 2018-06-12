@@ -109,6 +109,7 @@
         <textarea name="" id="text" placeholder="Insert text here"></textarea>
         <button id="replace" class="btn">Replace</button>
         <button id="edit" class="btn">Edit links</button>
+        <button id="clear" class="btn">Clear</button>
     </div>
 </div>
 </body>
@@ -118,6 +119,8 @@
     var linksBox = $('.links');
     var editBtn = $('#edit');
     var replaceBtn = $('#replace');
+    var clearBtn = $('#clear');
+    var content = $('.content');
     var textLinks = '';
 
     editBtn.prop('disabled', true).addClass('disabled');
@@ -125,22 +128,26 @@
     textArea.on('paste', function (e) {
         var strVal = (e.originalEvent || e).clipboardData.getData('text/plain');
         replaceLinks(strVal);
-        replaceBtn.prop('disabled', true).addClass('disabled');
-        editBtn.prop('disabled', false).removeClass('disabled');
+        // replaceBtn.prop('disabled', true).addClass('disabled');
+        // editBtn.prop('disabled', false).removeClass('disabled');
     });
 
     editBtn.click(function () {
-        textArea.val(textLinks).show();
-        linksBox.hide();
-        editBtn.prop('disabled', true).addClass('disabled');
-        replaceBtn.prop('disabled', false).removeClass('disabled');
+        textArea.val(textLinks);
+        content.trigger('changeBox');
+        // editBtn.prop('disabled', true).addClass('disabled');
+        // replaceBtn.prop('disabled', false).removeClass('disabled');
     });
 
     replaceBtn.click(function () {
         var strVal = textArea.val();
         replaceLinks(strVal);
-        replaceBtn.prop('disabled', true).addClass('disabled');
-        editBtn.prop('disabled', false).removeClass('disabled');
+        // replaceBtn.prop('disabled', true).addClass('disabled');
+        // editBtn.prop('disabled', false).removeClass('disabled');
+    });
+
+    clearBtn.click(function () {
+        content.trigger('changeBox', [ true ]);
     });
 
     function replaceLinks(strVal){
@@ -158,8 +165,26 @@
             var html = '<li><a href="' + array[i] + '" target="_blank">' + str + '</a></li>';
             linksBox.append(html);
         }
-        textArea.hide();
-        linksBox.show();
+        content.trigger('changeBox');
     }
+
+    content.on('changeBox', function (e, clear = false, ) {
+        if(clear){
+            textArea.val('').show();
+            linksBox.empty().hide();
+        }
+        else{
+            textArea.toggle();
+            linksBox.toggle();
+        }
+        if(linksBox.is(":visible")){
+            replaceBtn.prop('disabled', true).addClass('disabled');
+            editBtn.prop('disabled', false).removeClass('disabled');
+        }
+        else{
+            editBtn.prop('disabled', true).addClass('disabled');
+            replaceBtn.prop('disabled', false).removeClass('disabled');
+        }
+    })
 </script>
 </html>
