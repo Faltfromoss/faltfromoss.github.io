@@ -48,11 +48,11 @@
             display: none;
             overflow: auto;
             background-color: #fff;
-            padding: 20px 10px 20px 60px;
+            padding: 20px 20px 20px 60px;
         }
         a{
             display: block;
-            padding: 5px 0;
+            padding: 5px;
             color: #18a352;
             font-size: 18px;
             text-decoration: none;
@@ -117,35 +117,29 @@
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
-    var textArea = $('#text');
-    var linksBox = $('.links');
-    var editBtn = $('#edit');
-    var replaceBtn = $('#replace');
-    var clearBtn = $('#clear');
-    var content = $('.content');
-    var textLinks = '';
+    let textArea = $('#text');
+    let linksBox = $('.links');
+    let editBtn = $('#edit');
+    let replaceBtn = $('#replace');
+    let clearBtn = $('#clear');
+    let content = $('.content');
+    let textLinks = '';
 
     editBtn.prop('disabled', true).addClass('disabled');
 
     textArea.on('paste', function (e) {
-        var strVal = (e.originalEvent || e).clipboardData.getData('text/plain');
+        let strVal = (e.originalEvent || e).clipboardData.getData('text/plain');
         replaceLinks(strVal);
-        // replaceBtn.prop('disabled', true).addClass('disabled');
-        // editBtn.prop('disabled', false).removeClass('disabled');
     });
 
     editBtn.click(function () {
         textArea.val(textLinks);
         content.trigger('changeBox');
-        // editBtn.prop('disabled', true).addClass('disabled');
-        // replaceBtn.prop('disabled', false).removeClass('disabled');
     });
 
     replaceBtn.click(function () {
-        var strVal = textArea.val();
+        let strVal = textArea.val();
         replaceLinks(strVal);
-        // replaceBtn.prop('disabled', true).addClass('disabled');
-        // editBtn.prop('disabled', false).removeClass('disabled');
     });
 
     clearBtn.click(function () {
@@ -154,17 +148,17 @@
 
     function replaceLinks(strVal){
         textLinks = strVal;
-        var array = strVal.split('\n');
+        let array = strVal.split('\n');
         linksBox.empty();
-        for(var i = 0; i < array.length; i++){
+        for(let i = 0; i < array.length; i++){
             if(array[i] === ''){
                 continue;
             }
-            var str = array[i];
+            let str = array[i];
             if(str.length >= 60){
                 str = str.substr(0, 60) + '...';
             }
-            var html = '<li><a href="' + array[i] + '" target="_blank">' + str + '</a></li>';
+            let html = '<li><a href="' + array[i] + '" target="_blank">' + str + '</a></li>';
             linksBox.append(html);
         }
         content.trigger('changeBox');
