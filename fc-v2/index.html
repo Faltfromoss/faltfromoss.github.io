@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <title>Главная страница</title><!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css" href="css/main.css"><!--[if lt IE 9]>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+  </head>
+  <body class="index-page">
+    <div class="page">
+      <nav class="mobileMenu">
+        <ul>
+          <li><a class="mobileMenu__link" href="about.html">О нас</a></li>
+          <li><span>Наши партнёры</span>
+            <ul>
+              <li><a class="mobileMenu__link" href="burgerClub.html">Burger Club</a></li>
+              <li><a class="mobileMenu__link" href="pizzaTime.html">Pizza Time</a></li>
+              <li><a class="mobileMenu__link" href="kruta.html">Kruta</a></li>
+              <li><a class="mobileMenu__link" href="sushiPizza.html">Sushi-Pizza</a></li>
+              <li><a class="mobileMenu__link" href="chelentano.html">Chelentano</a></li>
+            </ul>
+          </li>
+          <li><a class="mobileMenu__link" href="delivery.html">Доставка</a></li>
+          <li><a class="mobileMenu__link" href="payment.html">Оплата</a></li>
+          <li><a class="mobileMenu__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <header class="header">
+        <div class="topLine container-fluid Fixed">
+          <div class="topLineContainer container d-block d-md-flex">
+            <div class="topLine__mobile d-flex d-md-none justify-content-start align-items-center">
+              <div class="topLine__hamburger">
+                <div class="hamburger hamburger--spin">
+                  <div class="hamburger-box">
+                    <div class="hamburger-inner"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="topLine__logo d-flex justify-content-center flex-fill">
+                <svg class="infoLine__logo infoLine__logo--mobile ">
+                  <use xlink:href="static/svg/symbol/sprite.svg#logo"></use>
+                </svg>
+              </div>
+            </div>
+            <nav class="topMenu">
+              <ul class="topMenu__list">
+                <li class="topMenu__item topMenu__item--active"><a class="topMenu__link" href="about.html">О нас</a></li>
+                <li class="topMenu__item"><a class="topMenu__link" href="partners.html">Наши партнёры</a></li>
+                <li class="topMenu__item"><a class="topMenu__link" href="delivery.html">Доставка</a></li>
+                <li class="topMenu__item"><a class="topMenu__link" href="payment.html">Оплата</a></li>
+                <li class="topMenu__item"><a class="topMenu__link" href="contacts.html">Контакты</a></li>
+              </ul>
+            </nav>
+            <!--include _searchForm-->
+          </div>
+        </div>
+        <div class="container">
+          <div class="row infoLine justify-content-end justify-content-sm-around no-gutters">
+            <div class="col-4 d-none d-md-flex align-items-center justify-content-center">
+              <svg class="infoLine__logo ">
+                <use xlink:href="static/svg/symbol/sprite.svg#logo"></use>
+              </svg>
+            </div>
+            <div class="col-12 info col-xm-6 col-md-4">
+              <div class="info__icon info__icon--MRight"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="info__description">
+                <p>Доставка еды по л/б</p>
+                <p>г. Каменское</p>
+              </div>
+            </div>
+            <div class="col-12 info col-xm-6 col-md-4">
+              <div class="info__icon info__icon--MRight"><i class="far fa-clock"></i></div>
+              <div class="info__description">
+                <p>Ежедневно</p>
+                <p>с 10:00 до 22:00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="content">
+        <section class="sectionTop">
+          <div class="container">
+            <div class="owl-carousel owl-carousel--top"><img src="static/img/slider-top/slide1.jpg" alt="Slide1"><img src="static/img/slider-top/slide2.jpg" alt="Slide2"><img src="static/img/slider-top/slide3.jpg" alt="Slide3"><img src="static/img/slider-top/slide4.jpg" alt="Slide4">
+            </div>
+          </div>
+        </section>
+        <section class="sectionShops">
+          <div class="sectionHeader sectionHeader--margin20">
+            <svg class="sectionHeader__logo sectionHeader__logo--orange ">
+              <use xlink:href="static/svg/symbol/sprite.svg#menu"></use>
+            </svg>
+            <h2 class="sectionHeader__text sectionHeader__logo--black">Выберите заведение</h2>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 col-lg-4">
+                <div class="sectionShopsItem sectionShopsItem--bottom30"><img class="img-responsive" src="static/img/shops/pizzaTime.jpg">
+                  <div class="itemOverlay itemOverlay--radius">
+                    <div class="itemOverlay__text">Pizza Time</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="sectionShopsItem sectionShopsItem--bottom30"><img class="img-responsive" src="static/img/shops/burgerClub.jpg">
+                  <div class="itemOverlay itemOverlay--radius">
+                    <div class="itemOverlay__text">Burger Club</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="sectionShopsItem sectionShopsItem--bottom30"><img class="img-responsive" src="static/img/shops/craftBurgers.jpg">
+                  <div class="itemOverlay itemOverlay--radius">
+                    <div class="itemOverlay__text">Craft Burgers</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="sectionShopsItem sectionShopsItem--bottom30"><img class="img-responsive" src="static/img/shops/kruta.jpg">
+                  <div class="itemOverlay itemOverlay--radius">
+                    <div class="itemOverlay__text">Kruta</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="sectionShopsItem sectionShopsItem--bottom30"><img class="img-responsive" src="static/img/shops/sushi-pizza.jpg">
+                  <div class="itemOverlay itemOverlay--radius">
+                    <div class="itemOverlay__text">Sushi-Pizza</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="sectionShopsItem sectionShopsItem--bottom30"><img class="img-responsive" src="static/img/shops/chelentano.png">
+                  <div class="itemOverlay itemOverlay--radius">
+                    <div class="itemOverlay__text">Chelentano</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="sectionHot">
+          <div class="container">
+            <div class="sectionHeader sectionHeader--margin20 sectionHeader--MBottom10">
+              <svg class="sectionHeader__logo sectionHeader__logo--orange ">
+                <use xlink:href="static/svg/symbol/sprite.svg#hot"></use>
+              </svg>
+              <h2 class="sectionHeader__text sectionHeader__logo--white">Горячие предложения</h2>
+            </div>
+            <div class="owl-carousel owl-carousel--hot"><a class="sectionHot__item" href="#"><img class="img-responsive" src="static/img/slider-hot/slide1.jpg" alt="Slide1">
+                <div class="itemOverlay itemOverlay--hot">
+                  <h3 class="itemOverlay__shopName">Pizza Time</h3>
+                  <h4 class="itemOverlay__name">Пицца "Американо"</h4>
+                  <p class="itemOverlay__text">Фирменный томатный соус, сыр "Гауда", запеченное куриное филе, бекон, маслины, перец пепперони</p>
+                  <p class="itemOverlay__cost">120<span>грн</span></p>
+                </div></a><a class="sectionHot__item" href="#"><img class="img-responsive" src="static/img/slider-hot/slide2.jpg" alt="Slide2">
+                <div class="itemOverlay itemOverlay--hot">
+                  <h3 class="itemOverlay__shopName">Pizza Time</h3>
+                  <h4 class="itemOverlay__name">Пицца "Американо"</h4>
+                  <p class="itemOverlay__text">Фирменный томатный соус, сыр "Гауда", запеченное куриное филе, бекон, маслины, перец пепперони</p>
+                  <p class="itemOverlay__cost">120<span>грн</span></p>
+                </div></a><a class="sectionHot__item" href="#"><img class="img-responsive" src="static/img/slider-hot/slide3.jpg" alt="Slide3">
+                <div class="itemOverlay itemOverlay--hot">
+                  <h3 class="itemOverlay__shopName">Pizza Time</h3>
+                  <h4 class="itemOverlay__name">Пицца "Американо"</h4>
+                  <p class="itemOverlay__text">Фирменный томатный соус, сыр "Гауда", запеченное куриное филе, бекон, маслины, перец пепперони</p>
+                  <p class="itemOverlay__cost">120<span>грн</span></p>
+                </div></a><a class="sectionHot__item" href="#"><img class="img-responsive" src="static/img/slider-hot/slide4.jpg" alt="Slide4">
+                <div class="itemOverlay itemOverlay--hot">
+                  <h3 class="itemOverlay__shopName">Pizza Time</h3>
+                  <h4 class="itemOverlay__name">Пицца "Американо"</h4>
+                  <p class="itemOverlay__text">Фирменный томатный соус, сыр "Гауда", запеченное куриное филе, бекон, маслины, перец пепперони</p>
+                  <p class="itemOverlay__cost">120<span>грн</span></p>
+                </div></a><a class="sectionHot__item" href="#"><img class="img-responsive" src="static/img/slider-hot/slide5.jpg" alt="Slide5">
+                <div class="itemOverlay itemOverlay--hot">
+                  <h3 class="itemOverlay__shopName">Pizza Time</h3>
+                  <h4 class="itemOverlay__name">Пицца "Американо"</h4>
+                  <p class="itemOverlay__text">Фирменный томатный соус, сыр "Гауда", запеченное куриное филе, бекон, маслины, перец пепперони</p>
+                  <p class="itemOverlay__cost">120<span>грн</span></p>
+                </div></a><a class="sectionHot__item" href="#"><img class="img-responsive" src="static/img/slider-hot/slide6.jpg" alt="Slide6">
+                <div class="itemOverlay itemOverlay--hot">
+                  <h3 class="itemOverlay__shopName">Pizza Time</h3>
+                  <h4 class="itemOverlay__name">Пицца "Американо"</h4>
+                  <p class="itemOverlay__text">Фирменный томатный соус, сыр "Гауда", запеченное куриное филе, бекон, маслины, перец пепперони</p>
+                  <p class="itemOverlay__cost">120<span>грн</span></p>
+                </div></a><a class="sectionHot__item" href="#"><img class="img-responsive" src="static/img/slider-hot/slide7.jpg" alt="Slide7">
+                <div class="itemOverlay itemOverlay--hot">
+                  <h3 class="itemOverlay__shopName">Pizza Time</h3>
+                  <h4 class="itemOverlay__name">Пицца "Американо"</h4>
+                  <p class="itemOverlay__text">Фирменный томатный соус, сыр "Гауда", запеченное куриное филе, бекон, маслины, перец пепперони</p>
+                  <p class="itemOverlay__cost">120<span>грн</span></p>
+                </div></a>
+            </div>
+          </div>
+        </section>
+        <section class="sectionCauses">
+          <h2 class="sectionHeader__text sectionHeader--margin20 sectionCauses--sectionHeader">3 причины полюбить нас</h2>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="causesItem">
+                  <svg class="causesItem__logo causesItem__logo--orange ">
+                    <use xlink:href="static/svg/symbol/sprite.svg#delivery-truck"></use>
+                  </svg>
+                  <h4 class="causesItem__header">Скорость и удобство</h4>
+                  <p class="causesItem__text">Мы доставим ваш заказ в кратчайшие сроки. При этом горячее – горячим, холодное – холодным</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="causesItem">
+                  <svg class="causesItem__logo causesItem__logo--orange ">
+                    <use xlink:href="static/svg/symbol/sprite.svg#like"></use>
+                  </svg>
+                  <h4 class="causesItem__header">Полный сервис</h4>
+                  <p class="causesItem__text">Больше никаких доплат и выходов на подъезд. Только доставка до двери по фиксированным ценам</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="causesItem">
+                  <svg class="causesItem__logo causesItem__logo--orange ">
+                    <use xlink:href="static/svg/symbol/sprite.svg#fast-food"></use>
+                  </svg>
+                  <h4 class="causesItem__header">Тесное сотрудничество</h4>
+                  <p class="causesItem__text">Благодаря нам вы узнаете о других популярных заведениях левого берега и их фирменных блюдах.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="navInfo">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 d-none d-md-block">
+              <nav class="footerMenu">
+                <ul class="footerMenu__list">
+                  <li class="footerMenu__item footerMenu__item--active"><a class="footerMenu__link" href="about.html">О нас</a></li>
+                  <li class="footerMenu__item"><a class="footerMenu__link" href="partners.html">Наши партнёры</a></li>
+                  <li class="footerMenu__item"><a class="footerMenu__link" href="delivery.html">Доставка</a></li>
+                  <li class="footerMenu__item"><a class="footerMenu__link" href="payment.html">Оплата</a></li>
+                  <li class="footerMenu__item"><a class="footerMenu__link" href="contacts.html">Контакты</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="col-md-3 col-xm col-sm-6">
+              <div class="info footer--info">
+                <div class="info__icon info__icon--MRight"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="info__description text-center">
+                  <p>(068) 400-40-58</p>
+                  <p>(063) 132-10-80</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-xm col-sm-6">
+              <div class="info footer--info">
+                <div class="info__icon info__icon--MRight"><i class="far fa-clock"></i></div>
+                <div class="info__description text-center">
+                  <p>Ежедневно</p>
+                  <p>с 10:00 до 22:00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">© Food-courier 2018 г</div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
