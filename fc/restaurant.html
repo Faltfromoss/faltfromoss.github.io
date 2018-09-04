@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <title>Страница заведения</title><!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css" href="css/main.css"><!--[if lt IE 9]>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+  </head>
+  <body class="restaraunt-page">
+    <div class="page">
+      <nav class="mobileMenu">
+        <ul>
+          <li><a class="mobileMenu__link" href="about.html">О нас</a></li>
+          <li><span>Наши партнёры</span>
+            <ul>
+              <li><a class="mobileMenu__link" href="burgerClub.html">Burger Club</a></li>
+              <li><a class="mobileMenu__link" href="pizzaTime.html">Pizza Time</a></li>
+              <li><a class="mobileMenu__link" href="kruta.html">Kruta</a></li>
+              <li><a class="mobileMenu__link" href="sushiPizza.html">Sushi-Pizza</a></li>
+              <li><a class="mobileMenu__link" href="chelentano.html">Chelentano</a></li>
+            </ul>
+          </li>
+          <li><a class="mobileMenu__link" href="delivery.html">Доставка</a></li>
+          <li><a class="mobileMenu__link" href="payment.html">Оплата</a></li>
+          <li><a class="mobileMenu__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <header class="header">
+        <div class="topLine container-fluid Fixed">
+          <div class="topLineContainer container d-block d-md-flex">
+            <div class="topLine__mobile d-flex d-md-none justify-content-start align-items-center">
+              <div class="topLine__hamburger">
+                <div class="hamburger hamburger--spin">
+                  <div class="hamburger-box">
+                    <div class="hamburger-inner"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="topLine__logo d-flex justify-content-center flex-fill">
+                <svg class="infoLine__logo infoLine__logo--mobile ">
+                  <use xlink:href="static/svg/symbol/sprite.svg#logo"></use>
+                </svg>
+              </div>
+            </div>
+            <nav class="topMenu">
+              <ul class="topMenu__list">
+                <li class="topMenu__item topMenu__item--active"><a class="topMenu__link" href="about.html">О нас</a></li>
+                <li class="topMenu__item"><a class="topMenu__link" href="partners.html">Наши партнёры</a></li>
+                <li class="topMenu__item"><a class="topMenu__link" href="delivery.html">Доставка</a></li>
+                <li class="topMenu__item"><a class="topMenu__link" href="payment.html">Оплата</a></li>
+                <li class="topMenu__item"><a class="topMenu__link" href="contacts.html">Контакты</a></li>
+              </ul>
+            </nav>
+            <!--include _searchForm-->
+          </div>
+        </div>
+        <div class="container">
+          <div class="row infoLine justify-content-end justify-content-sm-around no-gutters">
+            <div class="col-4 d-none d-md-flex align-items-center justify-content-center">
+              <svg class="infoLine__logo ">
+                <use xlink:href="static/svg/symbol/sprite.svg#logo"></use>
+              </svg>
+            </div>
+            <div class="col-12 info col-xm-6 col-md-4">
+              <div class="info__icon mr-2"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="info__description">
+                <p>Доставка еды по л/б</p>
+                <p>г. Каменское</p>
+              </div>
+            </div>
+            <div class="col-12 info col-xm-6 col-md-4">
+              <div class="info__icon mr-2"><i class="far fa-clock"></i></div>
+              <div class="info__description">
+                <p>Ежедневно</p>
+                <p>с 10:00 до 22:00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="content">
+        <div class="container-fluid"><img class="head__img" src="static/img/restaraunts/pizz-time.jpg"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-9">
+              <ul class="nav mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item"><a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-menu" role="tab" aria-controls="pills-menu" aria-selected="true">Меню</a></li>
+                <li class="nav-item"><a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-about" role="tab" aria-controls="pills-about" aria-selected="false">О заведении</a></li>
+                <li class="nav-item"><a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-delivery" role="tab" aria-controls="pills-delivery" aria-selected="false">Условия доставки</a></li>
+              </ul>
+              <h2 class="shopTitle mb-3">Pizza Time - Популярные блюда</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+              <nav class="foodMenu">
+                <ul class="foodMenu__list">
+                  <li class="foodMenu__item"><a class="foodMenu__link" href="popular.html">
+                      <svg class="foodMenu__icon ">
+                        <use xlink:href="static/svg/symbol/sprite.svg#raiting"></use>
+                      </svg><span>Популярные блюда</span></a></li>
+                  <li class="foodMenu__item"><a class="foodMenu__link" href="salads.html">
+                      <svg class="foodMenu__icon ">
+                        <use xlink:href="static/svg/symbol/sprite.svg#salad"></use>
+                      </svg><span>Салаты</span></a></li>
+                  <li class="foodMenu__item"><a class="foodMenu__link" href="sushi.html">
+                      <svg class="foodMenu__icon ">
+                        <use xlink:href="static/svg/symbol/sprite.svg#sushi"></use>
+                      </svg><span>Суши</span></a></li>
+                  <li class="foodMenu__item"><a class="foodMenu__link" href="pizza.html">
+                      <svg class="foodMenu__icon ">
+                        <use xlink:href="static/svg/symbol/sprite.svg#pizza"></use>
+                      </svg><span>Пицца</span></a></li>
+                  <li class="foodMenu__item"><a class="foodMenu__link" href="burgers.html">
+                      <svg class="foodMenu__icon ">
+                        <use xlink:href="static/svg/symbol/sprite.svg#hamburger"></use>
+                      </svg><span>Бургеры</span></a></li>
+                  <li class="foodMenu__item"><a class="foodMenu__link" href="grille.html">
+                      <svg class="foodMenu__icon ">
+                        <use xlink:href="static/svg/symbol/sprite.svg#meat"></use>
+                      </svg><span>Гриль</span></a></li>
+                  <li class="foodMenu__item"><a class="foodMenu__link" href="hot-food.html">
+                      <svg class="foodMenu__icon ">
+                        <use xlink:href="static/svg/symbol/sprite.svg#soup"></use>
+                      </svg><span>Горячие блюда</span></a></li>
+                  <li class="foodMenu__item"><a class="foodMenu__link" href="drinks.html">
+                      <svg class="foodMenu__icon ">
+                        <use xlink:href="static/svg/symbol/sprite.svg#beer"></use>
+                      </svg><span>Напитки</span></a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="col-md-9">
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-menu" role="tabpanel" aria-labelledby="pills-menu-tab">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="foodContainer">
+                        <div class="foodItem"><img class="foodItem__img img-responsive" src="static/img/restaraunts/food/pizza/1.jpg" alt="Пицца">
+                          <div class="foodItem__title mb-2">Стандартная</div>
+                          <div class="foodSize mb-2">
+                            <input type="radio" name="size1" checked id="size-22-1" value="80">
+                            <label class="foodSize__item" for="size-22-1">22 см</label>
+                            <input type="radio" name="size1" id="size-32-1" value="100">
+                            <label class="foodSize__item" for="size-32-1">32 см</label>
+                            <input type="radio" name="size1" id="size-42-1" value="120">
+                            <label class="foodSize__item" for="size-42-1">42 см</label>
+                          </div>
+                          <div class="foodDescription">
+                            <div class="foodDescription__cost mb-1"></div>
+                            <div class="foodDescription__text">Сыр, ветчина, охотничьи колбаски, перец болгарский</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="foodContainer">
+                        <div class="foodItem"><img class="foodItem__img img-responsive" src="static/img/restaraunts/food/pizza/2.jpg" alt="Пицца">
+                          <div class="foodItem__title mb-2">Барбекю</div>
+                          <div class="foodSize mb-2">
+                            <input type="radio" name="size2" checked id="size-22-2" value="95">
+                            <label class="foodSize__item" for="size-22-2">22 см</label>
+                            <input type="radio" name="size2" id="size-32-2" value="130">
+                            <label class="foodSize__item" for="size-32-2">32 см</label>
+                            <input type="radio" name="size2" id="size-42-2" value="120">
+                            <label class="foodSize__item" for="size-42-2">42 см</label>
+                          </div>
+                          <div class="foodDescription">
+                            <div class="foodDescription__cost mb-1"></div>
+                            <div class="foodDescription__text">Сыр, ветчина, охотничьи колбаски, перец болгарский</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="foodContainer">
+                        <div class="foodItem"><img class="foodItem__img img-responsive" src="static/img/restaraunts/food/pizza/3.jpg" alt="Пицца">
+                          <div class="foodItem__title mb-2">Флорида</div>
+                          <div class="foodSize mb-2">
+                            <input type="radio" name="size3" checked id="size-22-3" value="90">
+                            <label class="foodSize__item" for="size-22-3">22 см</label>
+                            <input type="radio" name="size3" id="size-32-3" value="100">
+                            <label class="foodSize__item" for="size-32-3">32 см</label>
+                            <input type="radio" name="size3" id="size-42-3" value="130">
+                            <label class="foodSize__item" for="size-42-3">42 см</label>
+                          </div>
+                          <div class="foodDescription">
+                            <div class="foodDescription__cost mb-1"></div>
+                            <div class="foodDescription__text">Сыр моцарелла, шампиньоны, бекон, колбаса в/к, ветчина, баварские колбаски, помидоры</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="foodContainer">
+                        <div class="foodItem"><img class="foodItem__img img-responsive" src="static/img/restaraunts/food/pizza/4.jpg" alt="Пицца">
+                          <div class="foodItem__title mb-2">Карбонара</div>
+                          <div class="foodSize mb-2">
+                            <input type="radio" name="size4" checked id="size-22-4" value="110">
+                            <label class="foodSize__item" for="size-22-4">22 см</label>
+                            <input type="radio" name="size4" id="size-32-4" value="125">
+                            <label class="foodSize__item" for="size-32-4">32 см</label>
+                            <input type="radio" name="size4" id="size-42-4" value="135">
+                            <label class="foodSize__item" for="size-42-4">42 см</label>
+                          </div>
+                          <div class="foodDescription">
+                            <div class="foodDescription__cost mb-1"></div>
+                            <div class="foodDescription__text">Сыр моцарелла, куриное филе, ветчина, бекон, помидоры, оливки</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="foodContainer">
+                        <div class="foodItem"><img class="foodItem__img img-responsive" src="static/img/restaraunts/food/pizza/5.jpg" alt="Пицца">
+                          <div class="foodItem__title mb-2">Валенсия</div>
+                          <div class="foodSize mb-2">
+                            <input type="radio" name="size5" checked id="size-22-5" value="100">
+                            <label class="foodSize__item" for="size-22-5">22 см</label>
+                            <input type="radio" name="size5" id="size-32-5" value="115">
+                            <label class="foodSize__item" for="size-32-5">32 см</label>
+                            <input type="radio" name="size5" id="size-42-5" value="140">
+                            <label class="foodSize__item" for="size-42-5">42 см</label>
+                          </div>
+                          <div class="foodDescription">
+                            <div class="foodDescription__cost mb-1"></div>
+                            <div class="foodDescription__text">Сыр моцарелла, куриное филе, ветчина, бекон, помидоры, оливки</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="foodContainer">
+                        <div class="foodItem"><img class="foodItem__img img-responsive" src="static/img/restaraunts/food/pizza/6.jpg" alt="Пицца">
+                          <div class="foodItem__title mb-2">Охотничья</div>
+                          <div class="foodSize mb-2">
+                            <input type="radio" name="size6" checked id="size-22-6" value="95">
+                            <label class="foodSize__item" for="size-22-6">22 см</label>
+                            <input type="radio" name="size6" id="size-42-6" value="135">
+                            <label class="foodSize__item" for="size-42-6">42 см</label>
+                          </div>
+                          <div class="foodDescription">
+                            <div class="foodDescription__cost mb-1"></div>
+                            <div class="foodDescription__text">Сыр моцарелла, куриное филе, ветчина, бекон, помидоры, оливки</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="pills-about" role="tabpanel" aria-labelledby="pills-about-tab">
+                  <div class="about">
+                    <p class="about__description mb-3">Pizza Time предлагает: суши, пицца, бургеры, гарячие блюда и много другого!</p>
+                    <div class="row">
+                      <div class="col col-md-6 info justify-content-start">
+                        <div class="info__icon mr-2"><i class="far fa-clock"></i></div>
+                        <div class="info__description text-left">
+                          <p>Время работы</p>
+                          <p>с 10:00 до 22:00</p>
+                        </div>
+                      </div>
+                      <div class="col col-md-6 info justify-content-start">
+                        <div class="info__icon mr-2"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="info__description text-left">
+                          <p>Наш адрес</p>
+                          <p>г. Каменское Пр. Победы 29</p>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="about__description mt-3">PizzaTime на карте</p>
+                    <div class="googleMap mb-3">
+                      <iframe class="googleMap__frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2638.891754408912!2d34.55748871509884!3d48.59277142732708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbd73ba92b4fed%3A0x13db4a00b86d8444!2z0L_RgNC-0YHQvy4g0J_QvtCx0LXQtNGLLCAzNSwg0JrQsNC80LXQvdGB0LrQvtC1LCDQlNC90LXQv9GA0L7Qv9C10YLRgNC-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNTE5MDA!5e0!3m2!1sru!2sua!4v1536010357277" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+                    </div><a class="about__srcLink" href="https://www.facebook.com/dndzpizzatime/?ref=page_internal">Наша страница в Facebook</a>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="pills-delivery" role="tabpanel" aria-labelledby="pills-delivery-tab">
+                  <div class="row terms">
+                    <div class="col-md-4 termsItem"><span class="termsItem__title">Мин. заказ:</span>
+                      <div class="d-flex justify-content-center align-items-center">
+                        <!--img.termsItem__icon(src='static/svg/restaraunt/terms/coins.svg')-->
+                        <svg class="termsItem__icon ">
+                          <use xlink:href="static/svg/symbol/sprite.svg#coins"></use>
+                        </svg><span class="termsItem__cost ml-1">50₴</span>
+                      </div>
+                    </div>
+                    <div class="col-md-4 termsItem"><span class="termsItem__title">Бесплатная доставка:</span>
+                      <div class="d-flex justify-content-center align-items-center">
+                        <svg class="termsItem__icon ">
+                          <use xlink:href="static/svg/symbol/sprite.svg#money"></use>
+                        </svg><span class="termsItem__cost ml-1">от 180₴</span>
+                      </div>
+                    </div>
+                    <div class="col-md-4 termsItem"><span class="termsItem__title">Время доставки:</span>
+                      <div class="d-flex justify-content-center align-items-center">
+                        <svg class="termsItem__icon ">
+                          <use xlink:href="static/svg/symbol/sprite.svg#stopwatch"></use>
+                        </svg><span class="termsItem__cost ml-1">30-60 мин</span>
+                      </div>
+                    </div>
+                  </div>
+                  <h3 class="terms__title mt-3 mb-3">Стоимость доставки</h3>
+                  <div class="row">
+                    <div class="col col-md-6 deliveryDescItem">
+                      <div class="deliveryDescItem__cost">40₴</div>
+                      <div class="deliveryDescItem__regions">9, 10, 11 мкр-н</div>
+                      <div class="deliveryDescItem__streets">
+                        <p>- пр. Надднепрянский</p>
+                        <p>- пр. Героев АТО</p>
+                        <p>- пр. Ивана Франка</p>
+                        <p>- пр. Победы</p>
+                        <p>- ул. 40-лет победы</p>
+                      </div>
+                    </div>
+                    <div class="col col-md-6 deliveryDescItem">
+                      <div class="deliveryDescItem__cost">45₴</div>
+                      <div class="deliveryDescItem__regions">1, 2, 3, 4, 5 мкр-н</div>
+                      <div class="deliveryDescItem__streets">
+                        <p>- пр. Металлургов</p>
+                        <p>- пр. Дружбы Народов</p>
+                        <p>- ул. Харьковская</p>
+                        <p>- бул. Независимости</p>
+                        <p>- бул. Героев</p>
+                        <p>- бул. Строителей</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navInfo">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 d-none d-md-block">
+              <nav class="footerMenu">
+                <ul class="footerMenu__list">
+                  <li class="footerMenu__item footerMenu__item--active"><a class="footerMenu__link" href="about.html">О нас</a></li>
+                  <li class="footerMenu__item"><a class="footerMenu__link" href="partners.html">Наши партнёры</a></li>
+                  <li class="footerMenu__item"><a class="footerMenu__link" href="delivery.html">Доставка</a></li>
+                  <li class="footerMenu__item"><a class="footerMenu__link" href="payment.html">Оплата</a></li>
+                  <li class="footerMenu__item"><a class="footerMenu__link" href="contacts.html">Контакты</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="col-md-3 col-xm col-sm-6">
+              <div class="info footer--info">
+                <div class="info__icon mr-2"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="info__description text-center">
+                  <p>(068) 400-40-58</p>
+                  <p>(063) 132-10-80</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-xm col-sm-6">
+              <div class="info footer--info">
+                <div class="info__icon mr-2"><i class="far fa-clock"></i></div>
+                <div class="info__description text-center">
+                  <p>Ежедневно</p>
+                  <p>с 10:00 до 22:00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">© Food-courier 2018 г</div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
