@@ -13,19 +13,9 @@
     <div class="page">
       <nav class="mobileMenu">
         <ul>
+          <li><a class="mobileMenu__link" href="index.html">Главная</a></li>
           <li><a class="mobileMenu__link" href="about.html">О нас</a></li>
-          <li><span>Наши партнёры</span>
-            <ul>
-              <li><a class="mobileMenu__link" href="burgerClub.html">Burger Club</a></li>
-              <li><a class="mobileMenu__link" href="pizzaTime.html">Pizza Time</a></li>
-              <li><a class="mobileMenu__link" href="kruta.html">Kruta</a></li>
-              <li><a class="mobileMenu__link" href="sushiPizza.html">Sushi-Pizza</a></li>
-              <li><a class="mobileMenu__link" href="chelentano.html">Chelentano</a></li>
-            </ul>
-          </li>
-          <li><a class="mobileMenu__link" href="delivery.html">Доставка</a></li>
-          <li><a class="mobileMenu__link" href="payment.html">Оплата</a></li>
-          <li><a class="mobileMenu__link" href="contacts.html">Контакты</a></li>
+          <li><a class="mobileMenu__link" href="partners.html">Наши партнёры</a></li>
         </ul>
       </nav>
       <header class="header">
@@ -50,7 +40,6 @@
                 <li class="topMenu__item topMenu__item--active"><a class="topMenu__link" href="index.html">Главная</a></li>
                 <li class="topMenu__item"><a class="topMenu__link" href="about.html">О нас</a></li>
                 <li class="topMenu__item"><a class="topMenu__link" href="partners.html">Наши партнёры</a></li>
-                <li class="topMenu__item"><a class="topMenu__link" href="contacts.html">Контакты</a></li>
               </ul>
             </nav>
             <!--include _searchForm-->
@@ -63,14 +52,14 @@
                 <use xlink:href="static/svg/symbol/sprite.svg#logo"></use>
               </svg>
             </div>
-            <div class="col-12 info col-xm-6 col-md-4">
+            <div class="col-12 info infoLine--info col-xm-6 col-md-4">
               <div class="info__icon mr-2"><i class="fas fa-map-marker-alt"></i></div>
               <div class="info__description">
                 <p>Доставка еды по л/б</p>
                 <p>г. Каменское</p>
               </div>
             </div>
-            <div class="col-12 info col-xm-6 col-md-4">
+            <div class="col-12 info infoLine--info col-xm-6 col-md-4">
               <div class="info__icon mr-2"><i class="far fa-clock"></i></div>
               <div class="info__description">
                 <p>Ежедневно</p>
@@ -90,42 +79,44 @@
           <p>Служба доставки Food-Курьер работает пока только на левом берегу города Каменское. Но мы планируем активно развиваться, дабы обеспечить лучшие условия нашим клиентам.</p>
         </div>
       </div>
-      <div class="navInfo">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6 d-none d-md-block">
-              <nav class="footerMenu">
-                <ul class="footerMenu__list">
-                  <li class="footerMenu__item"><a class="footerMenu__link" href="index.html">Главная</a></li>
-                  <li class="footerMenu__item footerMenu__item--active"><a class="footerMenu__link" href="about.html">О нас</a></li>
-                  <li class="footerMenu__item"><a class="footerMenu__link" href="partners.html">Наши партнёры</a></li>
-                  <li class="footerMenu__item"><a class="footerMenu__link" href="contacts.html">Контакты</a></li>
-                </ul>
-              </nav>
-            </div>
-            <div class="col-md-3 col-xm col-sm-6">
-              <div class="info footer--info">
-                <div class="info__icon mr-2"><i class="fas fa-map-marker-alt"></i></div>
-                <div class="info__description text-center">
-                  <p>(068) 400-40-58</p>
-                  <p>(063) 132-10-80</p>
+      <footer>
+        <div class="navInfo">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 d-none d-lg-block">
+                <nav class="footerMenu">
+                  <ul class="footerMenu__list">
+                    <li class="footerMenu__item"><a class="footerMenu__link" href="index.html">Главная</a></li>
+                    <li class="footerMenu__item footerMenu__item--active"><a class="footerMenu__link" href="about.html">О нас</a></li>
+                    <li class="footerMenu__item"><a class="footerMenu__link" href="partners.html">Наши партнёры</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="col-lg-3 col-xm col-md-6">
+                <div class="info footer--info">
+                  <div class="info__icon mr-2"><i class="fas fa-phone"></i></div>
+                  <div class="info__description text-center">
+                    <p>(068) 400-40-58</p>
+                    <p>(063) 132-10-80</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-md-3 col-xm col-sm-6">
-              <div class="info footer--info">
-                <div class="info__icon mr-2"><i class="far fa-clock"></i></div>
-                <div class="info__description text-center">
-                  <p>Ежедневно</p>
-                  <p>с 10:00 до 22:00</p>
+              <div class="col-lg-3 col-xm col-md-6">
+                <div class="info footer--info">
+                  <div class="info__icon mr-2"><i class="far fa-clock"></i></div>
+                  <div class="info__description text-center">
+                    <p>Ежедневно</p>
+                    <p>с 10:00 до 22:00</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="copyright">© Food-courier 2018 г</div>
+        <div class="copyright">© Food-courier 2018 г</div>
+      </footer>
     </div>
+    <script src="js/libs.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
