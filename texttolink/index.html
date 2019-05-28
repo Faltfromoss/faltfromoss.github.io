@@ -124,20 +124,25 @@
     let clearBtn = $('#clear');
     let content = $('.content');
     let textLinks = '';
+    let isEditMode = false;
 
     editBtn.prop('disabled', true).addClass('disabled');
 
     textArea.on('paste', function (e) {
-        let strVal = (e.originalEvent || e).clipboardData.getData('text/plain');
-        replaceLinks(strVal);
+        if(!isEditMode) {
+            let strVal = (e.originalEvent || e).clipboardData.getData('text/plain');
+            replaceLinks(strVal);
+        }
     });
 
     editBtn.click(function () {
+        isEditMode = true;
         textArea.val(textLinks);
         content.trigger('changeBox');
     });
 
     replaceBtn.click(function () {
+        isEditMode = false;
         let strVal = textArea.val();
         replaceLinks(strVal);
     });
